@@ -1,1 +1,294 @@
-gfgcf      
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style/util.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style/owl.carousel.min.css" />
+    <link rel="stylesheet" href="style/owl.theme.default.min.css" />
+    <script src="js/owl.carousel.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url("https://fibramax.ec/recomendacion3/img/fondo.jpg");
+        background-size: cover;
+      }
+
+      .content {
+        max-width: 800px;
+        /* ajusta este ancho según tu diseño */
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.8);
+        /* Fondo semi-transparente */
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      /* Agrega tus otras reglas de estilo aquí */
+    </style>
+  </head>
+  <body>
+    <div class="owl-carousel owl-theme">
+      <div class="item margen"></div>
+      <div class="item">
+        <div class="row" style="margin-top: 1%">
+          <div class="col-sm-4" style="display: block; margin: center">
+            <img
+              src="https://fibramax.ec/recomendacion3/img/vive-al-maximo.png"
+              style="margin: auto; width: 100%; height: auto; max-width: 198px"
+            />
+          </div>
+          <div id="plan-ideal" class="col-sm-3 centrarImg">
+            <img
+              class="centrarImg opaci opcion-final"
+              src="https://fibramax.ec/recomendacion3/img/plan-ideal.png"
+              onclick="enviarFinal()"
+              style="
+                cursor: pointer;
+                width: 100%;
+                height: auto;
+                max-width: 195px;
+              "
+            />
+          </div>
+          <form
+            action="/plan-family-max/#wpcf7-f546-p403-o1"
+            method="post"
+            class="wpcf7-form init"
+            aria-label="Formulario de contacto"
+            novalidate="novalidate"
+            data-status="init"
+          >
+            <div style="display: none">
+              <input type="hidden" name="_wpcf7" value="546" />
+              <input type="hidden" name="_wpcf7_version" value="5.8.7" />
+              <input type="hidden" name="_wpcf7_locale" value="es_ES" />
+              <input
+                type="hidden"
+                name="_wpcf7_unit_tag"
+                value="wpcf7-f546-p403-o1"
+              />
+              <input type="hidden" name="_wpcf7_container_post" value="403" />
+              <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+              <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+            </div>
+
+            <p>
+              <label>
+                Número de Cédula<br />
+                <span class="wpcf7-form-control-wrap" data-name="CI">
+                  <input
+                    size="40"
+                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                    aria-required="true"
+                    aria-invalid="false"
+                    value=""
+                    type="text"
+                    name="CI"
+                  />
+                </span>
+              </label>
+            </p>
+            <p>
+              <input
+                class="wpcf7-form-control wpcf7-submit has-spinner"
+                type="submit"
+                value="Buscar"
+              />
+            </p>
+            <p style="display: none !important">
+              <label>
+                &#916;<textarea
+                  name="_wpcf7_ak_hp_textarea"
+                  cols="45"
+                  rows="8"
+                  maxlength="100"
+                ></textarea>
+              </label>
+              <input
+                type="hidden"
+                id="ak_js_1"
+                name="_wpcf7_ak_js"
+                value="114"
+              />
+              <script>
+                document
+                  .getElementById("ak_js_1")
+                  .setAttribute("value", new Date().getTime());
+              </script>
+            </p>
+            <div class="wpcf7-response-output" aria-hidden="true"></div>
+          </form>
+          <div id="resultados"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var owl = null;
+      $(document).ready(function () {
+        owl = $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: false,
+          mouseDrag: false,
+          touchDrag: false,
+          checkVisible: false,
+          responsive: {
+            0: {
+              items: 1,
+            },
+          },
+        });
+        $(".owl-dots button").each(function (index) {
+          $(this).addClass("etiqueta" + index);
+        });
+        $(".owl-dot").hide();
+      });
+      function enviarDos() {
+        $(".etiqueta1").click();
+      }
+      function enviarCorp() {
+        window.open("https://fibramax.ec/planes-coorporativos/", "_blank");
+      }
+
+      function enviarFinal() {
+        var uso = [];
+        $("#usoInternet img").each(function (index) {
+          if ($(this).hasClass("seleccion")) {
+            var aux = $(this).attr("name");
+            uso.push(aux);
+          }
+        });
+        window.open("https://fibramax.ec/plan-family-max/", "_blank");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".wpcf7-form");
+        const resultadosDiv = document.getElementById("resultados");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Evitar el envío del formulario por defecto
+          const ci = form.querySelector('input[name="CI"]').value;
+
+          // Imprimir el valor en la consola
+          console.log("Número de Cédula:", ci);
+
+          // Obtener los datos del formulario si es necesario
+          const formData = new FormData(form);
+          const urlSearchParams = new URLSearchParams(formData);
+          //1804565867
+          // Construir la URL de la API con los parámetros necesarios
+          const apiUrl = `http://127.0.0.1:8000/api/search-points/${ci}?${urlSearchParams}`;
+
+          // Realizar la solicitud GET a la API
+          fetch(apiUrl, {
+            method: "GET", // Usar el método GET
+            headers: {
+              "Content-Type": "application/json", // Establecer el tipo de contenido si es necesario
+              // Agregar cualquier otro encabezado necesario aquí
+            },
+          })
+            .then((response) => {
+              // Verificar el estado de la respuesta
+              if (response.ok) {
+                // Si la respuesta es exitosa, devolver los datos JSON
+                return response.json(); // Convertir la respuesta a JSON
+              } else {
+                // Si hay un error de respuesta, lanzar un error para ser capturado por el bloque catch
+                throw new Error("Error en la solicitud a la API");
+              }
+            })
+            .then((data) => {
+              // Manejar los datos de la respuesta de la API aquí
+              if (data.length === 0) {
+                mostrarMensaje("No tienes FibraPoints Activos");
+              } else {
+                // Si hay datos, mostrarlos
+                mostrarDatos(data);
+              }
+            })
+            .catch((error) => {
+              // Manejar cualquier error de la solicitud
+              console.error("Error al realizar la solicitud a la API:", error);
+            });
+        });
+
+        function mostrarMensaje(mensaje) {
+          // Limpiar cualquier contenido previo en resultadosDiv
+          resultadosDiv.innerHTML = "";
+
+          // Crear un elemento <p> para mostrar el mensaje
+          const parrafo = document.createElement("p");
+          parrafo.textContent = mensaje;
+
+          // Agregar el párrafo al elemento resultadosDiv
+          resultadosDiv.appendChild(parrafo);
+        }
+        // Función para mostrar los datos en el elemento resultadosDiv
+        function mostrarDatos(datos) {
+          // Limpiar cualquier contenido previo en resultadosDiv
+          resultadosDiv.innerHTML = "";
+
+          // Iterar sobre los datos y crear elementos para mostrarlos en el DOM
+          datos.forEach((dato) => {
+            // Crear un nuevo elemento <p> para cada dato
+            const parrafo = document.createElement("p");
+            const idContrato = document.createElement("span");
+            const name = document.createElement("span");
+            const points = document.createElement("span");
+            const email = document.createElement("span");
+
+            idContrato.textContent = `Número de Contrato: ${dato.idContrato}`;
+            name.textContent = `Nombre: ${dato.nombre_cliente}`;
+            points.textContent = `Puntos: ${dato.points}`;
+            email.textContent = `Email: ${dato.email}`;
+
+            idContrato.style.fontWeight = "bold";
+            name.style.fontWeight = "bold";
+            points.style.fontWeight = "bold";
+            email.style.fontWeight = "bold";
+
+            parrafo.appendChild(idContrato);
+            parrafo.appendChild(document.createElement("br"));
+            parrafo.appendChild(name);
+            parrafo.appendChild(document.createElement("br"));
+            parrafo.appendChild(points);
+            parrafo.appendChild(document.createElement("br"));
+            parrafo.appendChild(email);
+
+            // Agregar el párrafo al elemento resultadosDivMario
+            resultadosDiv.appendChild(parrafo);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
